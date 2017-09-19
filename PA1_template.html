@@ -192,10 +192,6 @@ percent_missing</code></pre>
 fill in those missing values. After some research on this topic the ‘mice’<br />
 package was selected to assist with creating an imputed data set to fill in the<br />
 missing values.</p>
-<pre class="r"><code>packages &lt;- c(&quot;lattice&quot;, &quot;mice&quot;)
-if (length(setdiff(packages, rownames(installed.packages()))) &gt; 0) {
-  install.packages(setdiff(packages, rownames(installed.packages())))  
-}</code></pre>
 <pre class="r"><code>require(&quot;mice&quot;)</code></pre>
 <pre><code>## Loading required package: mice</code></pre>
 <pre class="r"><code>md.pattern(activity)</code></pre>
