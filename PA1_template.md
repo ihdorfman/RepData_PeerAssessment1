@@ -1,4 +1,6 @@
 # Reproducible Research: Peer Assessment 1
+
+
 ### Isaac Dorfman
 ### September 18, 2017
 
@@ -53,7 +55,7 @@ hist(activity$steps, col = "steelblue", xlab = "Steps Taken Per Day",
      main = "Histogram of the Number of Steps Taken Per Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](figure/unnamed-chunk-4-1.png)<!-- -->
 
 From this we can see that for the days for which we have data that the  
 overwhelming majority of days saw no activity from the device.
@@ -69,7 +71,7 @@ plot(activity$interval,activity$steps, type = "l", xlab = "Interval",
      ylab = "Number of Steps", main = "Count of Steps by Interval")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-5-1.png)<!-- -->
 
 We would also like to know which interval saw the maximum number of steps:
 
@@ -185,7 +187,7 @@ hist(activity_complete$steps, col = "paleturquoise1", xlab = "Steps Taken Per Da
      main = "Histogram of the Number of Steps Taken Per Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](figure/unnamed-chunk-10-1.png)<!-- -->
 
 Even with the imputed values substituting for NAs the median is still 0 while  
 the imputed mean is around three steps per five minute interval higher than  
@@ -224,6 +226,6 @@ xyplot(steps~interval | weekday, data = activity_complete, type="l",
        col="lightcyan3", layout = c(1,2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](figure/unnamed-chunk-12-1.png)<!-- -->
 
 

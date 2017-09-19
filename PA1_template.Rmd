@@ -3,7 +3,19 @@ title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
     keep_md: true
+    
+    
 ---
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+    eval = TRUE,
+    include = TRUE,
+    fig.path = "figure/", 
+    fig.keep = "high", 
+    fig.show = "asis"
+)
+```
+
 ### Isaac Dorfman
 ### September 18, 2017
 
