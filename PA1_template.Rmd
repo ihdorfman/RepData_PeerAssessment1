@@ -1,8 +1,10 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+html_document: null
+keep_md: yes
+output:
+  github_document: default
+  html_document: default
+title: 'Reproducible Research: Peer Assessment 1'
 ---
 
 ### Isaac Dorfman
