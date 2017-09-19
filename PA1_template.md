@@ -55,7 +55,7 @@ hist(activity$steps, col = "steelblue", xlab = "Steps Taken Per Day",
      main = "Histogram of the Number of Steps Taken Per Day")
 ```
 
-![](figure/plot1.pngunnamed-chunk-3-1.png)<!-- -->
+![](figure/unnamed-chunk-3-1.png)<!-- -->
 
 From this we can see that for the days for which we have data that the  
 overwhelming majority of days saw no activity from the device.
@@ -71,7 +71,7 @@ plot(activity$interval,activity$steps, type = "l", xlab = "Interval",
      ylab = "Number of Steps", main = "Count of Steps by Interval")
 ```
 
-![](figure/plot2.pngunnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-4-1.png)<!-- -->
 
 We would also like to know which interval saw the maximum number of steps:
 
@@ -125,6 +125,12 @@ package was selected to assist with creating an imputed data set to fill in the
 missing values.
 
 
+```r
+packages <- c("lattice", "mice")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))  
+}
+```
 
 
 ```r
@@ -188,7 +194,7 @@ hist(activity_complete$steps, col = "paleturquoise1", xlab = "Steps Taken Per Da
      main = "Histogram of the Number of Steps Taken Per Day")
 ```
 
-![](figure/plot3.pngunnamed-chunk-10-1.png)<!-- -->
+![](figure/unnamed-chunk-10-1.png)<!-- -->
 
 Even with the imputed values substituting for NAs the median is still 0 while  
 the imputed mean is around three steps per five minute interval higher than  
@@ -227,4 +233,4 @@ xyplot(steps~interval | weekday, data = activity_complete, type="l",
        col="lightcyan3", layout = c(1,2))
 ```
 
-![](figure/plot4.pngunnamed-chunk-12-1.png)<!-- -->
+![](figure/unnamed-chunk-12-1.png)<!-- -->
