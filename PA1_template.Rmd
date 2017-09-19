@@ -41,9 +41,10 @@ activity_median
 We can also examine a histogram of the data to see why the mean is likely  
 going to be more informative of further analysis than the median:
 
-```{r plot1.png, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
+```{r plot1, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
 hist(activity$steps, col = "steelblue", xlab = "Steps Taken Per Day",
      main = "Histogram of the Number of Steps Taken Per Day")
+
 ```
 
 From this we can see that for the days for which we have data that the  
@@ -54,7 +55,7 @@ overwhelming majority of days saw no activity from the device.
 To get a better impression of the daily pattern the first step is going to be  
 a simple (and somewhat messy) time series plot:
 
-```{r plot2.png, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
+```{r plot2, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
 plot(activity$interval,activity$steps, type = "l", xlab = "Interval", 
      ylab = "Number of Steps", main = "Count of Steps by Interval")
 ```
@@ -115,7 +116,7 @@ mean(activity_complete$steps)
 median(activity_complete$steps)
 ```
 
-```{r plot3.png, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
+```{r plot3, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
 hist(activity_complete$steps, col = "paleturquoise1", xlab = "Steps Taken Per Day 
      (with imputed values included)",
      main = "Histogram of the Number of Steps Taken Per Day")
@@ -143,7 +144,7 @@ activity_complete$weekday <- factor((weekdays(activity_complete$date) %in% days)
 Now that we have the factor variables 'weekday' we can creat a plot to see if  
 there are any differences between weekdays and weekends.
 
-```{r plot4.png, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
+```{r plot4, eval = TRUE, include = TRUE,fig.path = "figure/",fig.keep = "high", fig.show = "asis"}
 require("lattice")
 
 xyplot(steps~interval | weekday, data = activity_complete, type="l", 
